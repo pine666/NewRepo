@@ -33,6 +33,27 @@ int main()
 		continue;
 	puts ( "Enter next movie title (empty line to stop): ");
 	prev = current;
+	/*显示电影列表*/
+	if (head == NULL)
+	printf ("No data entered. ");
+	else
+	printf ( "Here is the movie list: \n");
+	current = head;
+	while (current != NULL)
+	printf ( "Movie: 8sRating: %dln" ,
+	current->title, current->rating) ;
+	current =current->next;
+	/*完成任务，释放已分配的内存*/
+	current = head;
+	while (current !=NULL)
+	{
+		current = head;
+		head = current->next;
+		free (current);
+	}
+	printf ( "Bye ! \n" );
+	return 0;
+
 }
 
 char* s_gets(char* st, int n)
