@@ -40,7 +40,7 @@ int main()
 	printf ( "Here is the movie list: \n");
 	current = head;
 	while (current != NULL)
-	printf ( "Movie: 8sRating: %dln" ,
+	printf ( "Movie: %s Rating: %d\n" ,
 	current->title, current->rating) ;
 	current =current->next;
 	/*完成任务，释放已分配的内存*/
